@@ -12,7 +12,7 @@ Fine-tunes LoRA adapters on Mistral 7B using synthetic training data generated v
 pip install anthropic python-dotenv baml-py torch transformers peft accelerate bitsandbytes
 
 cp .env.example .env
-# Edit .env with your Anthropic API key
+# Edit .env with your Anthropic API key (for training corpus generation)
 ```
 
 ## The Pipeline
@@ -100,7 +100,7 @@ protocol/
   synthesize.py    # Data generation
   duplicate.py     # LoRA training
   interview.py     # Test/chat
-  evaluate.py      # A/B/C comparison
+  evaluate.py      # A/B comparison
 
 subjects/
   001-elena-martinez/
