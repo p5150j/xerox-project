@@ -35,7 +35,7 @@ This system ingests the same academic papers, clinical research, and domain expe
 | Recites WebMD | Cites the Maslach Burnout Inventory |
 | Roleplays expertise | Absorbed expertise |
 
-Your chatbot read a prompt. Our subjects read the curriculum.
+Your chatbot reads a prompt. Our subjects read the curriculum.
 
 ---
 
@@ -76,6 +76,33 @@ She spent 15 years treating burnout. We spent 2 minutes copying her methodology.
 The system prompt gives her a voice. The LoRA gives her *knowledge she shouldn't have*.
 
 **[→ View Subject File](subjects/001-elena-martinez/SUBJECT_FILE.md)**
+
+---
+
+## ▌ACQUIRED INTELLIGENCE
+
+> *"We don't make this up. We steal it from people who know things."*
+
+Every Xerox subject is built on **real research**. Not vibes. Not prompt tricks. Actual peer-reviewed papers, clinical frameworks, and domain expertise scraped from the sources that trained the humans we're copying.
+
+**During synthesis, the system executes live web searches:**
+
+```
+→ "burnout recovery clinical guidelines"
+→ "Maslach Burnout Inventory assessment criteria"
+→ "workplace boundary setting research"
+→ "occupational psychology energy management"
+→ "identity reconstruction after career crisis"
+```
+
+**What comes back:**
+- [DSM-5 occupational problem criteria](https://www.psychiatry.org/psychiatrists/practice/dsm) + [ICD-11 burnout definition](https://icd.who.int/browse11/l-m/en#/http://id.who.int/icd/entity/129180281)
+- [Peer-reviewed intervention studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4911781/)
+- [Clinical treatment protocols](https://www.ncbi.nlm.nih.gov/books/NBK279286/)
+- [Expert frameworks (Maslach, Leiter, Schaufeli)](https://www.wilmarschaufeli.nl/publications/Schaufeli/311.pdf)
+- [Real practitioner interviews](https://hbr.org/2019/12/burnout-is-about-your-workplace-not-your-people)
+
+This isn't a chatbot pretending to have read the textbook. This is a model that *actually consumed the curriculum*.
 
 ---
 
@@ -184,7 +211,9 @@ python3 protocol/interview.py \
 
 ### Step 3: Iterate
 
-More examples = deeper expertise. The gap between "reads about therapy" and "practiced therapy for 15 years" is ~500 training examples.
+> **More examples = deeper expertise.**
+>
+> The gap between *"reads about therapy"* and *"practiced therapy for 15 years"* is **~500 training examples**.
 
 ---
 
@@ -192,7 +221,7 @@ More examples = deeper expertise. The gap between "reads about therapy" and "pra
 
 ```bash
 # Clone the project
-git clone https://github.com/yourname/xerox-project.git
+git clone https://github.com/p5150j/xerox-project.git
 cd xerox-project
 
 # Install dependencies
@@ -200,7 +229,7 @@ pip install anthropic python-dotenv baml-py torch transformers peft accelerate b
 
 # Configure API access
 cp .env.example .env
-# Edit .env with your Anthropic API key
+# Edit .env with your Anthropic API key (for training corpus generation)
 
 # Regenerate BAML client (if needed)
 baml-cli generate
@@ -274,7 +303,7 @@ EXAMPLES_PER_BATCH = 25
 A: No. Prompt engineering tells a model to *act* like an expert. LoRA fine-tuning teaches it to *think* like one. The knowledge is in the weights, not the instructions.
 
 **Q: Why not just use Claude/GPT-4?**
-A: Cost and latency. A Xerox subject runs locally, responds in milliseconds, costs nothing per query. For production applications with thousands of users, this matters.
+A: Two reasons. First: this is a fully trained LoRA that you **own**. It runs on your hardware, responds in milliseconds, and costs exactly $0.00 per query. Forever. No API keys, no rate limits, no billing surprises. You trained it. It's yours. Second: **depth over breadth**. Claude and GPT-4 know a little about everything. A Xerox subject knows *everything* about one thing. You curate exactly what goes in—want an alien tax advisor who grew up in Uganda and trained at clown school? You can build that. Try getting that out of a general-purpose API.
 
 **Q: How is this different from RAG?**
 A: RAG retrieves relevant documents at query time. Xerox *absorbs* the documents into the model weights during training. The knowledge becomes instinctive, not looked-up.
@@ -296,6 +325,8 @@ A: Check the license of your base model (Mistral, Llama, etc.). The Xerox Projec
 ## ▌LICENSE
 
 MIT License. Duplicate freely.
+
+*If this creates a race of robotic lizard people in illuminati robes, I am not responsible. If you build something amazing and buy a Lambo, maybe ping me and buy me some tacos.* 🌮
 
 ---
 
