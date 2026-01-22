@@ -327,7 +327,7 @@ A: Check the license of your base model (Mistral, Llama, etc.). The Xerox Projec
 
 ## ▌LICENSE
 
-MIT License. Duplicate freely.
+[MIT License](LICENSE). Duplicate freely.
 
 *If this creates a race of robotic lizard people in illuminati robes, I am not responsible. If you build something amazing and buy a Lambo, maybe ping me and buy me some tacos.* 🌮
 
