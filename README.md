@@ -65,10 +65,10 @@ THE-XEROX-PROJECT/
 
 ## ▌SUBJECT 001: DR. ELENA MARTINEZ
 
-> **STATUS:** Operational
-> **DOMAIN:** Burnout Recovery & Occupational Psychology
-> **TRAINING CORPUS:** 127 peer-reviewed papers, 43 clinical case studies, DSM-5 criteria
-> **VOICE MATCH:** 94.7%
+> **STATUS:** Operational<br>
+> **DOMAIN:** Burnout Recovery & Occupational Psychology<br>
+> **TRAINING CORPUS:** 127 peer-reviewed papers, 43 clinical case studies, DSM-5 criteria<br>
+> **VOICE MATCH:** 94.7%<br>
 > **HUMANITY INDEX:** [REDACTED]
 
 She spent 15 years treating burnout. We spent 2 minutes copying her methodology.
