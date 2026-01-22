@@ -299,6 +299,9 @@ EXAMPLES_PER_BATCH = 25
 
 ## ▌FAQ
 
+**Q: Is this real or a joke repo?**
+A: Fuck yeah it's real. Every subject is grounded in peer-reviewed literature, clinical frameworks, and domain-specific epistemology. Give it a spin and clone anyone you can think of.
+
 **Q: Is this just fancy prompt engineering?**
 A: No. Prompt engineering tells a model to *act* like an expert. LoRA fine-tuning teaches it to *think* like one. The knowledge is in the weights, not the instructions.
 
