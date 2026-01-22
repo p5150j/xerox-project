@@ -71,7 +71,7 @@ THE-XEROX-PROJECT/
 > **VOICE MATCH:** 94.7%<br>
 > **HUMANITY INDEX:** [REDACTED]
 
-She spent 15 years treating burnout. We spent 2 minutes copying her methodology.
+She spent 15 years treating burnout. We spent 2 minutes cloning her methodology.
 
 The system prompt gives her a voice. The LoRA gives her *knowledge she shouldn't have*.
 
