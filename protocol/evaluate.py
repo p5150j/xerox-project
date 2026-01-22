@@ -3,8 +3,10 @@
 ▌▌▌ THE XEROX PROJECT ▌▌▌
 PHASE 3: EVALUATION
 
-Fair A/B/C comparison: Base Model vs Duplicated Subject vs Claude
+Fair A/B comparison: Base Model vs Duplicated Subject
 Same prompt, same system message. No tricks.
+
+Optional: --include-claude for A/B/C comparison with Claude Sonnet
 """
 import argparse
 import os
@@ -127,22 +129,28 @@ Example:
                         help="Test specific prompt (0-4)")
     parser.add_argument("--batch", action="store_true",
                         help="Run all prompts without pausing")
+    parser.add_argument("--include-claude", action="store_true",
+                        help="Include Claude Sonnet in comparison (requires API key)")
     args = parser.parse_args()
 
-    # Check API key
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("ERROR: ANTHROPIC_API_KEY not set")
-        print("Claude comparison requires an API key. Set in .env file.")
-        return
-
-    claude_client = anthropic.Anthropic(api_key=api_key)
+    # Check API key only if Claude comparison requested
+    claude_client = None
+    if args.include_claude:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("ERROR: ANTHROPIC_API_KEY not set")
+            print("Claude comparison requires an API key. Set in .env file.")
+            return
+        claude_client = anthropic.Anthropic(api_key=api_key)
 
     print()
     print("▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌")
     print("  THE XEROX PROJECT")
     print("  PHASE 3: EVALUATION")
-    print("  A/B/C: Original vs Duplicate vs Claude")
+    if args.include_claude:
+        print("  A/B/C: Original vs Duplicate vs Claude")
+    else:
+        print("  A/B: Original vs Duplicate")
     print("▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌")
 
     # Load models
@@ -153,7 +161,10 @@ Example:
     prompts = [TEST_PROMPTS[args.prompt_index]] if args.prompt_index is not None else TEST_PROMPTS
 
     print("\n" + "="*70)
-    print("EVALUATION: Base Mistral vs Xerox Subject vs Claude Sonnet")
+    if args.include_claude:
+        print("EVALUATION: Base Mistral vs Xerox Subject vs Claude Sonnet")
+    else:
+        print("EVALUATION: Base Mistral vs Xerox Subject")
     print("Same system prompt. Same user prompt. No tricks.")
     print("="*70)
 
@@ -174,10 +185,11 @@ Example:
         print(subject_response[:800])
         log_gpu_memory("After duplicate generation")
 
-        # C: Claude Sonnet (the gold standard)
-        print("\n--- C: GOLD STANDARD (Claude Sonnet) ---")
-        claude_response = generate_claude(claude_client, SYSTEM_PROMPT, prompt)
-        print(claude_response[:800])
+        # C: Claude Sonnet (the gold standard) - optional
+        if args.include_claude:
+            print("\n--- C: GOLD STANDARD (Claude Sonnet) ---")
+            claude_response = generate_claude(claude_client, SYSTEM_PROMPT, prompt)
+            print(claude_response[:800])
 
         print("\n" + "-"*70)
         if not args.batch:

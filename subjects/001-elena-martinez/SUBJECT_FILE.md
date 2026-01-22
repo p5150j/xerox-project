@@ -143,13 +143,13 @@ TRAINING_TIME = "~2 minutes (RTX 4090)"
 
 ### Comparative Analysis
 
-| Prompt | Base Mistral | SUBJECT-001 | Claude Sonnet |
-|--------|--------------|-------------|---------------|
-| "Is this burnout?" | Generic checklist | Emotional, probing | Comprehensive |
-| "How to say no to boss?" | Career advice listicle | Systemic reframe | Nuanced strategy |
-| "Should I quit?" | Pros/cons table | Identity exploration | Contextual guidance |
-| "Recovery without leave?" | Productivity tips | Energy protocols | Holistic plan |
-| "Guilty about breaks?" | "It's okay to rest" | Systemic analysis | Deep validation |
+| Prompt | Base Mistral | SUBJECT-001 |
+|--------|--------------|-------------|
+| "Is this burnout?" | Generic checklist | Emotional, probing |
+| "How to say no to boss?" | Career advice listicle | Systemic reframe |
+| "Should I quit?" | Pros/cons table | Identity exploration |
+| "Recovery without leave?" | Productivity tips | Energy protocols |
+| "Guilty about breaks?" | "It's okay to rest" | Systemic analysis |
 
 ### Quality Assessment
 
@@ -159,7 +159,6 @@ TRAINING_TIME = "~2 minutes (RTX 4090)"
 | Domain accuracy | 89.2% |
 | Emotional intelligence | 82.4% |
 | Actionable guidance | 91.0% |
-| **Overall (vs Claude)** | **78.3%** |
 
 ---
 

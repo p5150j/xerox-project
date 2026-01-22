@@ -75,7 +75,7 @@ python3 protocol/interview.py \
     --interactive
 ```
 
-**A/B/C with Claude:**
+**A/B Comparison:**
 ```bash
 python3 protocol/evaluate.py \
     --weights subjects/001-elena-martinez/weights

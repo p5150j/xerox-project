@@ -47,7 +47,7 @@ THE-XEROX-PROJECT/
 ├── protocol/                    # ← The duplication system
 │   ├── synthesize.py           #    Feed papers → Extract knowledge
 │   ├── duplicate.py            #    Train the replica
-│   ├── evaluate.py             #    Test against the original (Claude)
+│   ├── evaluate.py             #    Test against the original
 │   └── interview.py            #    Talk to your creation
 │
 ├── subjects/                    # ← The specimens
@@ -123,7 +123,6 @@ python3 protocol/evaluate.py \
 Side-by-side comparison:
 - **Base Mistral:** Generic, bullet-pointed, WebMD energy
 - **Xerox Subject:** Nuanced, conversational, *knows things it shouldn't*
-- **Claude API:** The gold standard (but requires $$$ per call)
 
 ### Phase 4: Interview
 *Talk to your creation*
@@ -264,9 +263,8 @@ EXAMPLES_PER_BATCH = 25
 |-------|----------|
 | **Base Mistral** | Generic symptom checklist. "Here are 5 signs of burnout: 1. Exhaustion 2. Cynicism..." |
 | **Xerox Elena** | "That flatness you're describing—where even good news doesn't land anymore—that's not regular tired. Regular tired, you sleep it off. This sounds like the emotional exhaustion phase of burnout, where your capacity to feel *anything* gets depleted." |
-| **Claude Sonnet** | Highest quality, but $0.003/1K tokens |
 
-**Assessment:** Xerox subjects reach 70-80% of Claude quality at 0% per-token cost.
+**Assessment:** The difference is clear. Base Mistral recites information. Xerox subjects *understand* the domain.
 
 ---
 
