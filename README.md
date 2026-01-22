@@ -19,6 +19,11 @@
 
 ---
 
+
+https://github.com/user-attachments/assets/7a6cabd9-bd2c-4199-9558-8d917c830ecb
+
+
+
 ## ▌ORIENTATION BRIEFING
 
 Welcome to **The Xerox Project**.
