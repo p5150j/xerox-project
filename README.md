@@ -85,7 +85,7 @@ The system prompt gives her a voice. The LoRA gives her *knowledge she shouldn't
 *Extract domain knowledge from the source material*
 
 ```bash
-python protocol/synthesize.py \
+python3 protocol/synthesize.py \
     --source subjects/001-elena-martinez/source.txt \
     --output subjects/001-elena-martinez/training_data \
     --examples 250
@@ -101,7 +101,7 @@ The system will:
 *Imprint the knowledge onto a base model*
 
 ```bash
-python protocol/duplicate.py \
+python3 protocol/duplicate.py \
     --data subjects/001-elena-martinez/training_data/*_mistral.jsonl \
     --output subjects/001-elena-martinez/weights
 ```
@@ -116,7 +116,7 @@ python protocol/duplicate.py \
 *Compare against the original*
 
 ```bash
-python protocol/evaluate.py \
+python3 protocol/evaluate.py \
     --subject subjects/001-elena-martinez
 ```
 
@@ -129,7 +129,7 @@ Side-by-side comparison:
 *Talk to your creation*
 
 ```bash
-python protocol/interview.py \
+python3 protocol/interview.py \
     --subject subjects/001-elena-martinez \
     --interactive
 ```
@@ -167,18 +167,18 @@ COMMUNICATION STYLE:
 
 ```bash
 # Synthesize training data
-python protocol/synthesize.py \
+python3 protocol/synthesize.py \
     --source subjects/002-your-expert/source.txt \
     --output subjects/002-your-expert/training_data \
     --examples 500
 
 # Duplicate
-python protocol/duplicate.py \
+python3 protocol/duplicate.py \
     --data subjects/002-your-expert/training_data/*_mistral.jsonl \
     --output subjects/002-your-expert/weights
 
 # Interview
-python protocol/interview.py \
+python3 protocol/interview.py \
     --subject subjects/002-your-expert \
     --interactive
 ```

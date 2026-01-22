@@ -20,7 +20,7 @@ cp .env.example .env
 ### 1. Generate Training Data
 
 ```bash
-python protocol/synthesize.py \
+python3 protocol/synthesize.py \
     --source subjects/001-elena-martinez/source.txt \
     --output subjects/001-elena-martinez/training_data \
     --examples 250
@@ -36,7 +36,7 @@ python protocol/synthesize.py \
 ### 2. Train LoRA Adapter
 
 ```bash
-python protocol/duplicate.py \
+python3 protocol/duplicate.py \
     --data subjects/001-elena-martinez/training_data/*_mistral.jsonl \
     --output subjects/001-elena-martinez/weights
 ```
@@ -51,7 +51,7 @@ python protocol/duplicate.py \
 
 **Override:**
 ```bash
-python protocol/duplicate.py \
+python3 protocol/duplicate.py \
     --data ... \
     --output ... \
     --epochs 5 \
@@ -63,21 +63,21 @@ python protocol/duplicate.py \
 
 **Compare base vs fine-tuned:**
 ```bash
-python protocol/interview.py \
+python3 protocol/interview.py \
     --weights subjects/001-elena-martinez/weights \
     --compare
 ```
 
 **Interactive chat:**
 ```bash
-python protocol/interview.py \
+python3 protocol/interview.py \
     --weights subjects/001-elena-martinez/weights \
     --interactive
 ```
 
 **A/B/C with Claude:**
 ```bash
-python protocol/evaluate.py \
+python3 protocol/evaluate.py \
     --weights subjects/001-elena-martinez/weights
 ```
 
