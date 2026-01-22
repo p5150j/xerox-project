@@ -6,6 +6,36 @@
 
 ---
 
+## THEME BREAKDOWN
+
+### Liquid Death
+- Absurdist marketing that takes something mundane (water) and makes it extreme
+- Self-aware, doesn't take itself seriously
+- Heavy metal aesthetic meets corporate parody
+- "Murder your thirst" energy - aggressive language for something innocent
+- **For Xerox:** We're doing the same thing - taking LoRA fine-tuning (nerdy ML stuff) and making it feel dangerous and cool. "We duplicate doctors" sounds almost threatening. The chaotic paper-flying scene channels this.
+
+### Her (2013)
+- Soft, melancholic, intimate
+- Human loneliness + AI connection
+- Whispered conversations, warm glowing screens in dark rooms
+- The AI feels genuinely caring, not robotic
+- **For Xerox:** Scene 3 is pure Her - someone alone at night, finding comfort in an AI that actually *understands* them. The Xerox subject isn't a chatbot, it's something that absorbed real expertise and can actually help. That emotional beat is the heart of the commercial.
+
+### Stranger Things
+- 80s government lab aesthetic
+- Synth music, CRT monitors, classified projects
+- "What did they create in that lab?"
+- Nostalgic but unsettling
+- **For Xerox:** The 1987 origin story, the "SUBJECT 001" vibe, scientists in dark rooms staring at green screens. Makes the tech feel like a secret government project that just got declassified.
+
+### The Blend
+> Start mysterious/retro (Stranger Things) → go soft and emotional (Her) → end with chaotic irreverent energy (Liquid Death)
+
+It's a tonal rollercoaster that keeps people watching.
+
+---
+
 ## SCENE 1: THE MACHINE — *4 sec*
 
 **Prompt:**
