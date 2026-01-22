@@ -23,7 +23,7 @@
 
 Welcome to **The Xerox Project**.
 
-In 1987, we copied documents. In 2025, we copy doctors.
+In 1987, we copied documents. In 2026, we copy doctors.
 
 This system ingests the same academic papers, clinical research, and domain expertise that trained *actual human experts*—then synthesizes LoRA-weighted personas that **learned** the field rather than pretending to know it.
 
