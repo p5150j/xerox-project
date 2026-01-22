@@ -117,7 +117,7 @@ python3 protocol/duplicate.py \
 
 ```bash
 python3 protocol/evaluate.py \
-    --subject subjects/001-elena-martinez
+    --weights subjects/001-elena-martinez/weights
 ```
 
 Side-by-side comparison:
@@ -130,7 +130,7 @@ Side-by-side comparison:
 
 ```bash
 python3 protocol/interview.py \
-    --subject subjects/001-elena-martinez \
+    --weights subjects/001-elena-martinez/weights \
     --interactive
 ```
 
